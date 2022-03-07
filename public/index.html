@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+    />
+
+    <link rel="icon" href="devchallenges.png" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://devchallenges.io/"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@100;200;300;500&family=Outfit:wght@100&family=Playfair+Display&display=swap" rel="stylesheet">
+    <title>Checkout page</title>
+    <style>
+      *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  h1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #4E5150;
+    transform: rotate(0.02deg);
+/*     text-align: center;
+ */    margin-bottom: 50px;
+    grid-area: h1;
+  }
+  .container{
+    width: 80%;
+    margin:0 auto;
+  }
+  .container section{
+     width: 60%;
+  }
+  h2{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+    transform: rotate(-0.02deg);
+    margin-bottom: 15px;
+  }
+  label,input,select{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #4F4F4F;
+    transform: rotate(-0.02deg);
+    padding:18px;
+  }
+
+  input,select{
+    font-size: 16px;
+    line-height: 20px;
+    color: #828282;  
+    border: 1px solid #828282;
+    border-radius: 12px;     
+    margin:15px 0 18px;              
+  }
+  .input{
+    width:100%;
+  }
+  main{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+        'h1 h1'
+        'section aside';
+    gap:10px;
+  }
+
+  button{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    background: #F2994A;
+    border-radius: 12px;
+    padding:17px 45px;
+    border:none;
+  }
+  .section1{
+    grid-area: section;
+    min-width:300px;
+  }
+  .section2{
+    background: #F2F2F2;
+    border-radius: 12px;
+    width:100%;
+    max-height:600px;
+    min-width:400px;
+    padding:30px;
+    grid-area:aside;
+  }
+  aside h3{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #4E5150;
+    transform: rotate(-0.02deg);
+    margin-bottom: 6px;
+  }
+  aside span{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #828282;
+    transform: rotate(-0.02deg);
+  }
+  .span2{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    text-decoration-line: line-through;
+    color: #4E5150;
+    transform: rotate(-0.02deg);
+  }
+  img{
+    border-radius: 15px;
+    width:100%;
+    max-width: 150px;
+    height:auto;
+    margin: 0 20px 20px 0;
+  }
+  aside .box{
+    display:flex;
+  }
+  .orangeSpan{
+    color: #F2994A;
+  }
+  aside .minus,aside .plus{
+        padding:4px;
+        border:1px solid #ddd;
+        background: #E0E0E0;
+        border-radius: 4px;
+        margin:20px 10px 20px;
+    }
+ .number{
+    border: 1px solid #828282;
+    border-radius: 12px;
+    margin-top:25px;
+    display:flex
+ }
+aside input{
+  margin: 0px;              
+padding: 0;
+width:80%;
+  text-align: center;
+  font-size: 16px;
+  background: transparent;
+  border:none;
+}
+
+footer h3{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #333333;
+}
+.line{
+  border: 1px solid #BDBDBD;
+  border-left: none;
+  border-right: none;
+  margin-top:100px;
+}
+.line h3 .line h4,footer div h3,footer div h4{
+  padding: 10px 0;
+}
+
+.button{
+    text-align: right;
+  }
+  .h2{
+      margin-top: 55px;
+  }
+
+  footer div{
+      display:flex;
+      justify-content: space-between;
+  }
+  
+
+
+
+
+@media(max-width:375px){
+    .container{
+        display: flex;
+        width: 94%;
+        flex-direction: column;
+    }
+    .section2{
+        order:2;
+        min-width:100%;
+    }
+    .section1{
+      order:3;
+      width:100%;
+  }
+  h1{
+    order:1;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 20px;
+  }
+  aside h3{
+    font-size: 12px;
+    line-height: 15px;  
+  }
+  .span2{
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .orangeSpan{
+    font-size: 12px;
+    line-height: 15px;
+  }
+  footer h3,footer h4,.section1 h2{
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .section1 input{
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .section1 label{
+    font-size: 10px;
+    line-height: 12px;
+  }
+  button{
+    font-size: 16px;
+    line-height: 20px;
+  }
+   .container section{
+    width:100%;
+  }
+  select{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+    </style>
+  </head>
+  <body>     
+    <main class="container">  
+     <h1>Checkout</h1>
+
+      <section class="section1">
+          <h2>Contact information</h2>
+          <label for="email">E-mail</label><br>
+          <input class="input" type="text" id="email" placeholder=" &#9993; Enter your email...  "><br>
+          <label for="phone">Phone</label><br>
+          <input class="input" type="text" id="email" placeholder=" &#128381; Enter your phone...  ">
+
+          <h2 class="h2">Shipping address</h2>
+          <label for="name">Full name</label><br>
+          <input class="input" type="text" id="name" placeholder="  Rodney Cotton "><br>
+          <label for="phone">Address</label><br>
+          <input class="input" type="text" id="phone" placeholder="  Your address..   "><br>
+          <label for="city">City</label><br>
+          <input class="input" type="text" id="city" placeholder="  Your city..   "><br>
+          <main>
+            <div>
+              <label for="country">Country</label><br>
+              <select name="pets" id="country">
+                <option value="">Your Country..  </option>
+              </select>
+            </div>
+            <div>  
+              <label for="postal">Postal code</label><br>
+              <input class="input" type="text" id="postal" placeholder="  Your postal code..   ">
+            </div>
+          </main>
+          <input id="save" type="checkbox"><label for="save"> Save this information for next time</label><br>
+          <div class="button">
+            <button>Continue</button>
+          </div>
+          
+      </section>
+      <section class="section2">
+        <aside>
+          <div class="box">
+            <img src="/photo1.png" alt="img1">
+            <div>
+              <h3>Vintage Backbag</h3>
+              <span class="orangeSpan">$54.99 </span>
+              <span class="span2">$94.99 </span>
+              <div class="number">
+                <span class="minus">-</span>
+                <input type="text" value="1"/>
+                <span class="plus">+</span>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <img src="/photo2.png" alt="img2">
+            <div>
+              <h3>Levi Shoes</h3>
+              <span class="orangeSpan">$74.99 </span>
+              <span class="span2">$124.99 </span>
+              <div class="number">
+                <span class="minus">-</span>
+                <input type="text" value="1"/>
+                <span class="plus">+</span>
+              </div>
+            </div>
+          </div>
+          <footer>
+            <div class="line">
+              <h3>Shipping</h3>
+              <h4>$19</h4>
+            </div>
+            <div>
+              <h3>Total</h3>
+              <h4>$148.98</h4>
+            </div>
+          </footer>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>
